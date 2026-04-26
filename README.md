@@ -14,14 +14,22 @@
 - Chat με AI Tutor εξειδικευμένο σε θέματα πληροφορικής
 - Απαντάει αποκλειστικά σε ερωτήσεις πληροφορικής
 - Εμφανίζει "Σκέφτομαι..." ενώ επεξεργάζεται την ερώτηση
-- Bubble style μηνύματα με timestamp
+- Bubble style μηνύματα
 - Απαντάει πάντα στα ελληνικά
 
 ## Οδηγίες Εγκατάστασης
 
 1. Κατέβασε το project
 2. Άνοιξέ το στο Android Studio
-3. Πρόσθεσε το OpenAI API key στο `app/src/main/res/values/secrets.xml`
+3. Δημιούργησε το αρχείο `app/src/main/res/values/secrets.xml` με το δικό σου OpenAI API key:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="openai_api_key">ΤΟ_API_KEY_ΣΟΥ_ΕΔΩ</string>
+</resources>
+```
+
 4. Τρέξε την εφαρμογή σε emulator ή φυσικό κινητό
 
 ## Αρχιτεκτονική
@@ -39,3 +47,7 @@ OpenAI GPT-3.5-turbo API
 - Ασύγχρονες κλήσεις με OkHttp3 Callback
 - Σωστός χειρισμός errors
 - Loading indicator κατά την αναμονή
+
+## Ασφάλεια
+
+Το αρχείο `secrets.xml` δεν συμπεριλαμβάνεται στο αποθετήριο για λόγους ασφαλείας. Κάθε χρήστης πρέπει να δημιουργήσει το δικό του αρχείο με έγκυρο OpenAI API key από το https://platform.openai.com
